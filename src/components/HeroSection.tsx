@@ -10,20 +10,7 @@ const HeroSection = () => {
     successRate: 0,
   });
 
-  const [typewriterText, setTypewriterText] = useState('');
-  const fullText = 'Your Trusted Partner in Dental Health & Wellness';
-
   useEffect(() => {
-    // Typewriter effect
-    let currentIndex = 0;
-    const typewriterInterval = setInterval(() => {
-      if (currentIndex <= fullText.length) {
-        setTypewriterText(fullText.slice(0, currentIndex));
-        currentIndex++;
-      } else {
-        clearInterval(typewriterInterval);
-      }
-    }, 80);
 
     // Counter animations
     const animateCounters = () => {
@@ -55,7 +42,6 @@ const HeroSection = () => {
     const counterTimeout = setTimeout(animateCounters, 1000);
 
     return () => {
-      clearInterval(typewriterInterval);
       clearTimeout(counterTimeout);
     };
   }, []);
@@ -80,10 +66,8 @@ const HeroSection = () => {
                 </span>
               </div>
               
-              <h1 className="text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-                <span className="block overflow-hidden whitespace-nowrap border-r-2 border-primary animate-typewriter">
-                  {typewriterText}
-                </span>
+              <h1 className="text-5xl lg:text-6xl font-bold text-foreground leading-tight animate-fade-in-up">
+                Where Beautiful Smiles Begin
               </h1>
               
               <p className="text-xl text-muted-foreground leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
