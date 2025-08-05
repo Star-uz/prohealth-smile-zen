@@ -133,10 +133,6 @@ All colors MUST be HSL.
 
 /* Medical Animation Keyframes */
 @layer utilities {
-  @keyframes typewriter {
-    from { width: 0; }
-    to { width: 100%; }
-  }
   
   @keyframes fadeInUp {
     from {
@@ -238,9 +234,6 @@ All colors MUST be HSL.
     border-bottom: 1px solid hsla(var(--border), 0.3);
   }
   
-  .animate-typewriter {
-    animation: typewriter 2s steps(40, end);
-  }
   
   .animate-fade-in-up {
     animation: fadeInUp 0.8s ease-out;
